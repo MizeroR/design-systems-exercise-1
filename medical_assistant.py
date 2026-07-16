@@ -45,7 +45,7 @@ def run_medical_conversation():
     
     # Initial greeting from the assistant
     initial_response = client.messages.create(
-        model="claude-opus-4-1-20250805",
+        model="claude-3-5-haiku-20241022",
         max_tokens=1024,
         system=SYSTEM_PROMPT,
         messages=[{
@@ -99,7 +99,7 @@ def run_medical_conversation():
         
         # Get response from Claude
         response = client.messages.create(
-            model="claude-opus-4-1-20250805",
+            model="claude-3-5-haiku-20241022",
             max_tokens=1024,
             system=SYSTEM_PROMPT,
             messages=conversation_history
@@ -166,7 +166,7 @@ def interactive_mode():
         })
         
         response = client.messages.create(
-            model="claude-opus-4-1-20250805",
+            model="claude-3-5-haiku-20241022",
             max_tokens=1024,
             system=SYSTEM_PROMPT,
             messages=conversation_history
